@@ -9,7 +9,7 @@ server.listen(8000, (err) => {
 }); */
 
 //concise code
-const http = require("http")
+/* const http = require("http")
   .createServer((req, res) => {
     res.end("Hello");
   })
@@ -17,3 +17,16 @@ const http = require("http")
     if (err) throw err;
     console.log("Success....");
   });
+ */
+
+// Express.js
+var express = require("express");
+var app = express();
+//basic routing
+app.get("/", (req, res) => {
+  res.send("Root Requests");
+});
+app.listen(5000, (err) => {
+  if (err) throw err;
+  console.log("Server ....");
+});
